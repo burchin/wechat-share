@@ -1,10 +1,26 @@
 {
-  "name": "client",
+  "name": "wechat-share",
   "version": "1.0.0",
-  "description": "客户端",
+  "description": "微信分享",
+  "clientPath": "./client",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "node lint.js",
+    "lint:fix": "npm run lint --fix",
+    "clean:lib": "rimraf ./lib",
+    "clean:dist": "rimraf ./dist",
+    "lib": "webpack --progress --config ./webpack/webpack.lib.conf.js -p",
+    "build": "npm run clean:dist && webpack --env=prod",
+    "build:anal": "npm run clean:dist && webpack --anal=1",
+    "build:dev": "npm run clean:dist && webpack --env=dev",
+    "build:test": "npm run clean:dist && webpack --env=test",
+    "build:local": "npm run clean:dist && webpack --env=local",
+    "build:test:cdn": "npm run clean:dist && webpack --env=test --cdn=1",
+    "build:prod:cdn": "npm run clean:dist && webpack --env=prod --cdn=1",
+    "mock": "webpack-dev-server --env=mock",
+    "dev": "webpack-dev-server --env=dev",
+    "pro": "webpack-dev-server --env=prod",
+    "local": "webpack-dev-server --env=local"
   },
   "author": "burchin",
   "license": "ISC",
@@ -37,6 +53,7 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-react": "^7.14.3",
     "file-loader": "^4.2.0",
+    "happypack": "^5.0.1",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.12.0",
@@ -47,8 +64,10 @@
     "typescript": "^3.6.2",
     "url-loader": "^2.1.0",
     "webpack": "^4.39.3",
+    "webpack-bundle-analyzer": "^3.4.1",
     "webpack-cli": "^3.3.7",
-    "webpack-dev-server": "^3.8.0"
+    "webpack-dev-server": "^3.8.0",
+    "webpack-parallel-uglify-plugin": "^1.1.2"
   },
   "dependencies": {
     "@babel/runtime-corejs3": "^7.5.5",
