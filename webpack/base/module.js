@@ -17,7 +17,15 @@ module.exports = (env, argv) => {
               hmr: argv && argv.env != 'prod'
             }
           },
-          'css-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              modules: {
+                localIdentName: '[local]__[name]-[hash:base64:8]'
+              }
+            }
+          },
           'sass-loader'
         ]
       },
