@@ -2,7 +2,6 @@
   "name": "wechat-share",
   "version": "1.0.0",
   "description": "微信分享",
-  "clientPath": "./client",
   "main": "index.js",
   "scripts": {
     "lint": "node lint.js",
