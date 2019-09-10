@@ -7,6 +7,7 @@ const { HotModuleReplacementPlugin } = require('webpack');
 const HappyPack = require('happypack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+
 module.exports = (env, argv) => {
   const happyPackThreadPool = HappyPack.ThreadPool({ size: cpus().length });
   const plugins = [];

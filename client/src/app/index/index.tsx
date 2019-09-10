@@ -2,10 +2,11 @@ import React from 'react';
 import { render } from 'react-dom';
 
 import Style from './style.scss';
+import './style1.css';
 
 class App extends React.Component {
   render() {
-    return (<div className={Style.box}>test</div>);
+    return (<div className={Style.logo}>test</div>);
   }
 }
 

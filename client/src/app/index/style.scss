@@ -1,3 +1,15 @@
-.box {
-    color: red;
+@import '~/assets/style/common.scss';
+
+html,
+body {
+    font-size: 12px;
+
+    * {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.logo {
+    color: $primary-color;
 }
