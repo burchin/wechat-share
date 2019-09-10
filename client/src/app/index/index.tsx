@@ -5,9 +5,9 @@ import Style from './style.scss';
 import './style1.css';
 
 class App extends React.Component {
-  render() {
-    return (<div className={Style.logo}>test</div>);
-  }
+    public render() {
+        return <div className={Style.logo}>test</div>;
+    }
 }
 
 render(<App />, document.getElementById('root'));

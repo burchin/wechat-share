@@ -1,6 +1,0 @@
-{
-    "eslintIntegration": true,
-    "singleQuote": true,
-    "Semicolons": true,
-    "tabWidth": 2
-  }
