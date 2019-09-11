@@ -2,14 +2,14 @@
 
 html,
 body {
-    font-size: 12px;
+  font-size: $primary-size;
 
-    * {
-        padding: 0;
-        margin: 0;
-    }
+  * {
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .logo {
-    color: $primary-color;
+  color: $primary-color;
 }

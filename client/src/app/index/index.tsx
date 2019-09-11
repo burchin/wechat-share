@@ -1,13 +1,14 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-import Style from './style.scss';
-import './style1.css';
-
 class App extends React.Component {
-    public render() {
-        return <div className={Style.logo}>test</div>;
-    }
+  public render() {
+    return (
+      <div>
+        <input type="button" value="分享" />
+      </div>
+    );
+  }
 }
 
 render(<App />, document.getElementById('root'));
